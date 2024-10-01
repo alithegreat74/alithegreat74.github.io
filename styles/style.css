@@ -1,0 +1,111 @@
+@font-face {
+  font-family: "calamity";
+  src: url(../fonts/CalamityRegular[editby].otf);
+}
+
+@font-face {
+  font-family: "elf";
+  src: url(../fonts/ConsolateElf-X33XP.ttf);
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0.6) 100%
+    ),
+    url(../images/pexels-lanophotography-194511.jpg) no-repeat center center;
+  background-size: cover;
+  color: #fff;
+}
+
+h1,h2,h3 {
+  font-family: "calamity";
+}
+
+p,a {
+  font-family: "elf";
+  font-size: 20px;
+  line-height: 1.3em;
+}
+
+section, article {
+  width: 90%;
+  padding-block: 2rem;
+  border-bottom: 1px solid #fff;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex_column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.justify_center {
+  justify-content: center;
+}
+
+.align_center {
+  align-items: center;
+}
+
+.gap_16 {
+  gap: 1rem;
+}
+
+#hero_section {
+  gap: 3rem;
+  & > h1 {
+    font-size: 36px;
+    font-family: "calamity";
+    margin-block-end: 0;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  & > span {
+    display: block;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    background: url(../images/pexels-pixabay-159393.jpg) no-repeat center center;
+    background-size: cover;
+  }
+  & > div > a {
+    position: relative;
+  }
+  & > div > a:after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .5s;
+    background-color: #fff;
+    width: 40px;
+    height: 3px;
+    border-radius: 50%;
+    filter: blur(2px);
+    opacity: 0;
+  }
+  & > div > a:hover::after {
+    opacity: 1;
+  }
+}
+
+#button_section > button {
+
+}
