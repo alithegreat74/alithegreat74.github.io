@@ -13,8 +13,8 @@ body {
   box-sizing: border-box;
   background: linear-gradient(
       0deg,
-      rgba(0, 0, 0, 0.6) 0%,
-      rgba(0, 0, 0, 0.6) 100%
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0.7) 100%
     ),
     url(../images/pexels-lanophotography-194511.jpg) no-repeat center center;
   background-size: cover;
@@ -98,7 +98,7 @@ article {
   & > div > a:after {
     content: "";
     position: absolute;
-    bottom: -2px;
+    bottom: -5px;
     left: 50%;
     transform: translateX(-50%);
     transition: 0.5s;
@@ -106,7 +106,7 @@ article {
     width: 40px;
     height: 3px;
     border-radius: 50%;
-    filter: blur(2px);
+    filter: blur(3px);
     opacity: 0;
   }
   & > div > a:hover::after {
@@ -133,15 +133,29 @@ article {
 }
 
 #projects_section button {
+  position: relative;
   width: 5rem;
   aspect-ratio: 1/1;
   border-radius: 50%;
   border: 1px solid #fff;
-  background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.6) 0%,
-      rgba(0, 0, 0, 0.6) 100%
-    )
+  background:
     no-repeat center center;
   background-size: cover;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.5s;
+    background-color: #fff;
+    width: 4rem;
+    height: 3px;
+    border-radius: 50%;
+    filter: blur(3px);
+    opacity: 0;
+  }
+  &:hover::after {
+    opacity: 1;
+  }
 }
