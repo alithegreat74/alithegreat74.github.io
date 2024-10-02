@@ -21,17 +21,28 @@ body {
   color: #fff;
 }
 
-h1,h2,h3 {
+h1,
+h2,
+h3 {
   font-family: "calamity";
+  letter-spacing: 1px;
+  margin: 0;
+  text-transform: uppercase;
 }
 
-p,a {
+h1 {
+  font-size: 36px;
+}
+
+p,
+a {
   font-family: "elf";
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.3em;
 }
 
-section, article {
+section,
+article {
   width: 90%;
   padding-block: 2rem;
   border-bottom: 1px solid #fff;
@@ -63,19 +74,16 @@ section, article {
   align-items: center;
 }
 
+.text_center {
+  text-align: center;
+}
+
 .gap_16 {
   gap: 1rem;
 }
 
 #hero_section {
   gap: 3rem;
-  & > h1 {
-    font-size: 36px;
-    font-family: "calamity";
-    margin-block-end: 0;
-    text-align: center;
-    letter-spacing: 1px;
-  }
   & > span {
     display: block;
     width: 12rem;
@@ -93,7 +101,7 @@ section, article {
     bottom: -2px;
     left: 50%;
     transform: translateX(-50%);
-    transition: .5s;
+    transition: 0.5s;
     background-color: #fff;
     width: 40px;
     height: 3px;
@@ -107,5 +115,33 @@ section, article {
 }
 
 #button_section > button {
+  position: relative;
+  border: 1px solid;
+  border-color: #fff #777 #777 #fff;
+  background-color: transparent;
+  color: #fff;
+  padding: 1.1rem 1.6rem 1.1rem 1.8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.5rem;
+  transition: 0.5s;
+  box-shadow: 0px 0px #777, 0px 0px #fff;
+  &:hover {
+    box-shadow: 5px 5px #777, -5px -5px #fff;
+    border-color: #fff0;
+  }
+}
 
+#projects_section button {
+  width: 5rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0.6) 100%
+    )
+    no-repeat center center;
+  background-size: cover;
 }
