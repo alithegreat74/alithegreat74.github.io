@@ -22,16 +22,20 @@ body {
 }
 
 h1,
-h2,
-h3 {
+h2 {
   font-family: "calamity";
   letter-spacing: 1px;
   margin: 0;
   text-transform: uppercase;
+  text-align: center;
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 42px;
+}
+
+h2 {
+  font-size: 32px;
 }
 
 p,
@@ -39,6 +43,7 @@ a {
   font-family: "elf";
   font-size: 18px;
   line-height: 1.3em;
+  text-align: center;
 }
 
 section,
@@ -74,28 +79,80 @@ article {
   align-items: center;
 }
 
+.flex_wrap {
+  flex-wrap: wrap;
+}
+
 .text_center {
   text-align: center;
+}
+
+.no_select {
+  user-select: none;
+}
+
+.no_margin {
+  margin: 0;
 }
 
 .gap_16 {
   gap: 1rem;
 }
 
-#hero_section {
-  gap: 3rem;
-  & > span {
-    display: block;
-    width: 12rem;
-    height: 12rem;
-    border-radius: 50%;
-    background: url(../images/pexels-pixabay-159393.jpg) no-repeat center center;
-    background-size: cover;
+.project_detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.project_info {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  & > li {
+    border-radius: 2px;
+    overflow: hidden;
+    white-space: nowrap;
   }
-  & > div > a {
-    position: relative;
+  & span {
+    padding: 0.2rem 0.4rem;
+    display: inline-block;
   }
-  & > div > a:after {
+  & > li > span:first-child {
+    background-color: #5f5f5f;
+  }
+  & > li.date > span:last-child {
+    background-color: #1081c2;
+  }
+  & > li.category > span:last-child {
+    background-color: #e75be7;
+  }
+  & > li.engine > span:last-child {
+    background-color: #f58142;
+  }
+  & > li.language > span:last-child {
+    background-color: #41bb13;
+  }
+  & > li.level > span:last-child {
+    background-color: #770377;
+  }
+  & > li.core > span:last-child {
+    background-color: #f58142;
+  }
+  & > li.api > span:last-child {
+    background-color: #f58142;
+  }
+}
+
+.icons > a {
+  position: relative;
+  &::after {
     content: "";
     position: absolute;
     bottom: -5px;
@@ -109,8 +166,20 @@ article {
     filter: blur(3px);
     opacity: 0;
   }
-  & > div > a:hover::after {
+  &:hover::after {
     opacity: 1;
+  }
+}
+
+#hero_section {
+  gap: 3rem;
+  & > span {
+    display: block;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    background: url(../images/pexels-pixabay-159393.jpg) no-repeat center center;
+    background-size: cover;
   }
 }
 
@@ -138,13 +207,12 @@ article {
   aspect-ratio: 1/1;
   border-radius: 50%;
   border: 1px solid #fff;
-  background:
-    no-repeat center center;
+  background: no-repeat center center;
   background-size: cover;
   &::after {
     content: "";
     position: absolute;
-    bottom: -1rem;
+    bottom: -.7rem;
     left: 50%;
     transform: translateX(-50%);
     transition: 0.5s;
