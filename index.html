@@ -32,12 +32,15 @@
           ratione ad sed? Sit.
         </p>
       </article>
-      <section id="button_section" class="main_section flex justify_center gap_16 flex_wrap">
+      <section
+        id="button_section"
+        class="main_section flex justify_center gap_16 flex_wrap"
+      >
         <button onclick="showProjects()">projects</button>
         <button onclick="showCareer()">careers</button>
         <button onclick="showSkills()">skills</button>
       </section>
-      <section id="skills_section" class="main_section">
+      <section id="skills_section" class="main_section" style="display: none">
         <section>
           <h2>Programming Language</h2>
           <div style="--i: 80%">
@@ -57,7 +60,22 @@
           </div>
         </section>
       </section>
-      <section id="projects_section" class="main_section flex_column align_center gap_16" style="display: none;">
+      <section
+        id="careers_section"
+        class="main_section flex_column justify_center gap_16 flex_wrap"
+      >
+        <hgroup class="text_center">
+          <h2>Careers</h2>
+          <p>Explore through my education and work experience.</p>
+        </hgroup>
+        <button onclick="showEducations()">educations</button>
+        <button onclick="showSWorks()">works</button>
+      </section>
+      <section
+        id="projects_section"
+        class="main_section flex_column align_center gap_16"
+        style="display: none"
+      >
         <hgroup class="text_center">
           <h2>projects</h2>
           <p>Explore through my projects.</p>
@@ -80,7 +98,11 @@
           ></button>
         </div>
       </section>
-      <article id="project_num_1" class="main_section project_detail" style="display: none;">
+      <article
+        id="project_num_1"
+        class="main_section project_detail"
+        style="display: none"
+      >
         <hgroup class="text_center">
           <h2>Mind Walker</h2>
           <p><q>mind walker is a peace of art.</q> Hosein sadri</p>

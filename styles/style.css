@@ -186,7 +186,8 @@ a {
   }
 }
 
-#button_section > button {
+#button_section > button,
+#careers_section > button {
   position: relative;
   border: 1px solid;
   border-color: #fff #777 #777 #fff;
