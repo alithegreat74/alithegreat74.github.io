@@ -9,7 +9,7 @@
   <body>
     <header></header>
     <main>
-      <section id="hero_section" class="flex_column align_center">
+      <section id="hero_section" class="main_section flex_column align_center">
         <h1>Alireza Mohammadi</h1>
         <span></span>
         <div class="icons flex gap_16">
@@ -24,7 +24,7 @@
           /></a>
         </div>
       </section>
-      <article id="about_section">
+      <article id="about_section" class="main_section">
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam
           accusamus fugiat culpa deleniti placeat iusto nam. Eligendi quam
@@ -32,12 +32,32 @@
           ratione ad sed? Sit.
         </p>
       </article>
-      <section id="button_section" class="flex justify_center gap_16 flex_wrap">
+      <section id="button_section" class="main_section flex justify_center gap_16 flex_wrap">
         <button onclick="showProjects()">projects</button>
         <button onclick="showCareer()">careers</button>
         <button onclick="showSkills()">skills</button>
       </section>
-      <section id="projects_section" class="flex_column align_center gap_16">
+      <section id="skills_section" class="main_section">
+        <section>
+          <h2>Programming Language</h2>
+          <div style="--i: 80%">
+            <span>C++</span>
+            <span>80%</span>
+          </div>
+          <div style="--i: 50%">
+            <span>C#</span>
+            <span>50%</span>
+          </div>
+        </section>
+        <section>
+          <h2>Tools</h2>
+          <div style="--i: 100%">
+            <span>Unity</span>
+            <span>100%</span>
+          </div>
+        </section>
+      </section>
+      <section id="projects_section" class="main_section flex_column align_center gap_16" style="display: none;">
         <hgroup class="text_center">
           <h2>projects</h2>
           <p>Explore through my projects.</p>
@@ -60,7 +80,7 @@
           ></button>
         </div>
       </section>
-      <article id="project_num_1" class="project_detail">
+      <article id="project_num_1" class="main_section project_detail" style="display: none;">
         <hgroup class="text_center">
           <h2>Mind Walker</h2>
           <p><q>mind walker is a peace of art.</q> Hosein sadri</p>

@@ -46,8 +46,7 @@ a {
   text-align: center;
 }
 
-section,
-article {
+.main_section {
   width: 90%;
   padding-block: 2rem;
   border-bottom: 1px solid #fff;
@@ -73,6 +72,10 @@ article {
 
 .justify_center {
   justify-content: center;
+}
+
+.justify_between {
+  justify-content: space-between;
 }
 
 .align_center {
@@ -225,5 +228,30 @@ article {
   }
   &:hover::after {
     opacity: 1;
+  }
+}
+
+#skills_section > section {
+  padding-bottom: 2rem;
+  & > h2 {
+    margin-bottom: 1rem;
+  }
+  & > div {
+    box-sizing: border-box;
+    font-family: "calamity";
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: var(--i);
+    max-width: 100%;
+    height: 2.2rem;
+    border: 1px solid #fff7;
+    margin-block: .5rem;
+    padding-inline: .5rem;
+  }
+  & > div > span {
+    text-transform: uppercase;
+    letter-spacing: 2px;
   }
 }
