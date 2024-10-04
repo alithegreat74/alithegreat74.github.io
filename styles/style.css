@@ -22,7 +22,8 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: "calamity";
   letter-spacing: 1px;
   margin: 0;
@@ -187,7 +188,7 @@ a {
 }
 
 #button_section > button,
-#careers_section > button {
+#careers_section > div > button {
   position: relative;
   border: 1px solid;
   border-color: #fff #777 #777 #fff;
@@ -216,7 +217,7 @@ a {
   &::after {
     content: "";
     position: absolute;
-    bottom: -.7rem;
+    bottom: -0.7rem;
     left: 50%;
     transform: translateX(-50%);
     transition: 0.5s;
@@ -248,11 +249,23 @@ a {
     max-width: 100%;
     height: 2.2rem;
     border: 1px solid #fff7;
-    margin-block: .5rem;
-    padding-inline: .5rem;
+    margin-block: 0.5rem;
+    padding-inline: 0.5rem;
   }
   & > div > span {
     text-transform: uppercase;
     letter-spacing: 2px;
+  }
+}
+
+#educations_section > article {
+  padding-block: 1rem;
+  border-top: 1px solid;
+  border-image: linear-gradient(90deg , #fff0 0%, #fff 50%,   #fff0 100%) 1;
+  & > h3 {
+    margin-block: 1em;
+  }
+  &:first-of-type {
+    margin-top: 1rem;
   }
 }
