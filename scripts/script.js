@@ -28,14 +28,14 @@ function showSection(sectionId, button) {
     secActiveSection = null;
   }
   if (section === activeSection) {
-    section.style.display = section.style.display === "none" ? "block" : "none";
+    section.style.display = section.style.display === "none" ? "" : "none";
     activeSection = section.style.display === "none" ? null : section;
     button.classList.remove("shadow_active");
   } else {
     if (activeSection) {
       activeSection.style.display = "none";
     }
-    section.style.display = "block";
+    section.style.display = "";
     activeSection = section;
     button.classList.add("shadow_active");
   }
@@ -44,19 +44,19 @@ function showSection(sectionId, button) {
 function showSecSection(sectionId, button) {
   const section = document.getElementById(sectionId);
   const careerSection = document.getElementById("career_section");
-  const projectsSection = document.getElementById("career_section");
+  const projectsSection = document.getElementById("projects_section");
   const buttonsCareer = careerSection.getElementsByTagName("button");
   const buttonsProject = projectsSection.getElementsByTagName("button");
 
   if (section === secActiveSection) {
-    section.style.display = section.style.display === "none" ? "block" : "none";
+    section.style.display = section.style.display === "none" ? "" : "none";
     secActiveSection = section.style.display === "none" ? null : section;
     button.classList.remove("shadow_active");
   } else {
     if (secActiveSection) {
       secActiveSection.style.display = "none";
     }
-    section.style.display = "block";
+    section.style.display = "";
     secActiveSection = section;
 
     if (activeSection === projectsSection) {
