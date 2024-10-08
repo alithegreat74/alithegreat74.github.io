@@ -107,6 +107,10 @@ a {
   display: none;
 }
 
+.shadow {
+  box-shadow: 0px 0px #777, 0px 0px #fff;
+}
+
 .project_detail {
   display: flex;
   flex-direction: column;
@@ -192,7 +196,7 @@ a {
 }
 
 #button_section > button,
-#careers_section > div > button {
+#career_section > div > button {
   position: relative;
   border: 1px solid;
   border-color: #fff #777 #777 #fff;
@@ -208,6 +212,11 @@ a {
     box-shadow: 5px 5px #777, -5px -5px #fff;
     border-color: #fff0;
   }
+}
+
+#button_section > button.shadow_active,
+#career_section > div > button.shadow_active {
+  box-shadow: 5px 5px #777, -5px -5px #fff;
 }
 
 #projects_section button {

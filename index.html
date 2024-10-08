@@ -36,9 +36,9 @@
         id="button_section"
         class="main_section flex justify_center gap_16 flex_wrap"
       >
-        <button onclick="showSection('projects_section')">projects</button>
-        <button onclick="showSection('career_section')">career</button>
-        <button onclick="showSection('skills_section')">skills</button>
+        <button onclick="showSection('projects_section', this)">projects</button>
+        <button onclick="showSection('career_section', this)">career</button>
+        <button onclick="showSection('skills_section', this)">skills</button>
       </section>
       <section id="skills_section" class="main_section" style="display: none">
         <section>
@@ -66,8 +66,10 @@
           <p>Explore through my education and work experience.</p>
         </hgroup>
         <div class="flex justify_center gap_16">
-          <button onclick="showEducations()">educations</button>
-          <button onclick="showSWorks()">works</button>
+          <button onclick="showSecSection('educations_section', this)">
+            educations
+          </button>
+          <button onclick="showSecSection('works_section', this)">works</button>
         </div>
       </section>
       <article id="works_section" class="main_section" style="display: none">
