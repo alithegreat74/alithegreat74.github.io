@@ -1,5 +1,7 @@
 let activeSection = null;
 let secActiveSection = null;
+let shouldScroll = true;
+let secShouldScroll = true;
 
 const defaultBtn = () => {
   const buttonsCareer = document
@@ -30,12 +32,20 @@ function showSection(sectionId, button) {
   if (section === activeSection) {
     section.style.display = section.style.display === "none" ? "" : "none";
     activeSection = section.style.display === "none" ? null : section;
+    shouldScroll = true;
     button.classList.remove("shadow_active");
   } else {
     if (activeSection) {
       activeSection.style.display = "none";
     }
     section.style.display = "";
+    if (shouldScroll) {
+      window.scrollBy({
+        top: 100,
+        behavior: "smooth",
+      });
+    }
+    shouldScroll = false;
     activeSection = section;
     button.classList.add("shadow_active");
   }
@@ -51,20 +61,27 @@ function showSecSection(sectionId, button) {
   if (section === secActiveSection) {
     section.style.display = section.style.display === "none" ? "" : "none";
     secActiveSection = section.style.display === "none" ? null : section;
+    secShouldScroll = true;
     button.classList.remove("shadow_active");
   } else {
     if (secActiveSection) {
       secActiveSection.style.display = "none";
     }
     section.style.display = "";
+    if (secShouldScroll) {
+      window.scrollBy({
+        top: 100,
+        behavior: "smooth",
+      });
+    }
+    secShouldScroll = false;
     secActiveSection = section;
 
     if (activeSection === projectsSection) {
       for (let i = 0; i < buttonsProject.length; i++) {
         buttonsProject[i].classList.remove("shadow_active");
       }
-    }
-    else if (activeSection === careerSection) {
+    } else if (activeSection === careerSection) {
       for (let i = 0; i < buttonsCareer.length; i++) {
         buttonsCareer[i].classList.remove("shadow_active");
       }
